@@ -5,6 +5,7 @@
   "devDependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
     "detox": "^5.6.2",
+    "detox-expo-helpers": "^0.2.0",
     "jest": "^21.0.2",
     "jest-expo": "~20.0.0",
     "react-test-renderer": "16.0.0-alpha.12"
@@ -15,8 +16,7 @@
     "ios": "react-native run-ios",
     "test": "jest",
     "test-watch": "jest --watch",
-    "e2e-test":
-      "jest __e2e__ --setupTestFrameworkScriptFile=./jest/setup-e2e-tests.js"
+    "e2e-test": "jest __e2e__ --setupTestFrameworkScriptFile=./jest/setup-e2e-tests.js"
   },
   "jest": {
     "preset": "react-native"
@@ -28,10 +28,8 @@
   "detox": {
     "configurations": {
       "ios.sim": {
-        "binaryPath":
-          "ios/build/Build/Products/Debug-iphonesimulator/trydetoxrn.app",
-        "build":
-          "xcodebuild -project ios/trydetoxrn.xcodeproj -scheme trydetoxrn -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/trydetoxrn.app",
+        "build": "xcodebuild -project ios/trydetoxrn.xcodeproj -scheme trydetoxrn -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
         "type": "ios.simulator",
         "name": "iPhone 7"
       }
