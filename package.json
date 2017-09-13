@@ -14,7 +14,9 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "test": "jest",
-    "test-watch": "jest --watch"
+    "test-watch": "jest --watch",
+    "e2e-test":
+      "jest __e2e__ --setupTestFrameworkScriptFile=./jest/setup-e2e-tests.js"
   },
   "jest": {
     "preset": "react-native"
