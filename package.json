@@ -20,5 +20,17 @@
   "dependencies": {
     "react": "16.0.0-alpha.12",
     "react-native": "^0.47.0"
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim": {
+        "binaryPath":
+          "ios/build/Build/Products/Debug-iphonesimulator/trydetoxrn.app",
+        "build":
+          "xcodebuild -project ios/trydetoxrn.xcodeproj -scheme trydetoxrn -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone 7"
+      }
+    }
   }
 }
