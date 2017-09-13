@@ -1,3 +1,5 @@
 node_modules/
 .expo/
 npm-debug.*
+/bin/Exponent-1.19.0.app
+.DS_Store
