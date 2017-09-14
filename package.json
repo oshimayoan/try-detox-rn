@@ -14,9 +14,9 @@
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "test": "jest",
+    "test": "jest ./App.test.js",
     "test-watch": "jest --watch",
-    "e2e-test": "detox build && jest __e2e__"
+    "test-e2e": "detox build && jest __e2e__"
   },
   "jest": {
     "preset": "react-native",
@@ -31,8 +31,10 @@
   "detox": {
     "configurations": {
       "ios.sim.debug": {
-        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/trydetoxrn.app",
-        "build": "xcodebuild -project ios/trydetoxrn.xcodeproj -scheme trydetoxrn -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "binaryPath":
+          "ios/build/Build/Products/Debug-iphonesimulator/trydetoxrn.app",
+        "build":
+          "xcodebuild -project ios/trydetoxrn.xcodeproj -scheme trydetoxrn -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
         "type": "ios.simulator",
         "name": "iPhone 7"
       }
